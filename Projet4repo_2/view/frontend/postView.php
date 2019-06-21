@@ -12,7 +12,7 @@
                 </h2>
                 
                 <p>
-                    <?= nl2br(htmlspecialchars($post['content'])) ?>
+                    <?= strip_tags(nl2br(html_entity_decode($post['content']))) ?>
                 </p>
             </div>
         </div>
@@ -28,21 +28,23 @@
         <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
     <?php
     }
+    $comments->closeCursor();
     ?>
 
-    <h4>Ajouter un commentaire</h4>
+    
 
-    <form action="index.php?action=addComment&amp;id=<?= $post['id'] ?>" method="post">
-        <div>
+    <form action="index.php?action=addComment&amp;id=<?= $post['id'] ?>"  class="form-horizontal col-lg-5 form_post_comments" method="post">
+        <legend>Ajouter un commentaire</legend>
+        <div class="form-group">
             <label for="author">Auteur</label><br />
             <input type="text" id="author" name="author" />
         </div>
-        <div>
+        <div class="form-group">
             <label for="comment">Commentaire</label><br />
-            <textarea id="comment" name="comment"></textarea>
+            <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
         </div>
         <div>
-            <input type="submit" />
+            <input type="submit" class="btn btn-primary" />
         </div>
     </form>
 </div>

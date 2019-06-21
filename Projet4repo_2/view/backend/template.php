@@ -16,7 +16,16 @@
 		<link href="public/color/default.css" rel="stylesheet">
 		<!--TinyMCE -->
 		<script src="https://cloud.tinymce.com/5/tinymce.min.js"></script>
-  		<script>tinymce.init({selector:'textarea#content'});</script>
+
+  		<script>tinymce.init({selector:"textarea#postcontent", max_width: 1100});</script>
+  		<script>tinymce.init({
+
+  			encoding: "UTF-8", 					
+  			selector: "textarea#updatecontent",
+  			plugins: "placeholder",
+  			max_width: 1100
+			});
+		</script>
     </head>
 
     <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
@@ -32,7 +41,7 @@
 	                    <i class="fa fa-bars"></i>
 	                </button>
 	        <a class="navbar-brand" href="index.php">
-	          <h1>Le blog de Jean Forteroche</h1>
+	          <h1>Jean Forteroche</h1>
 	        </a>
 	      </div>
 
@@ -65,11 +74,10 @@
 	  </section>
 	  <!-- /Section: intro -->
 	  <section>
+
 	  	<?= $content ?>
 	  	
-
-
-	  <footer>
+	  <footer id="footercolor">
 	    <div class="container">
 	      <div class="row">
 	        <div class="col-md-12 col-lg-12">
@@ -82,6 +90,9 @@
 	          </div>
 	          <p>&copy;SquadFREE. All rights reserved. <br /> Site réalisé dans le cadre d'une formation de développement web
 	          </p>
+	          	<div class="row">
+					<button><a href="index.php?action=showAdmin">Accès temporaire</a></button>
+				</div>
 	          <div class="credits">
 	            <!--
 	              All the links in the footer should remain intact. 
@@ -96,14 +107,16 @@
 	    </div>
 	  </footer>
 
-
-          <!-- Core JavaScript Files -->
+	<script src="public/tinyMCE/plugin.min.js"></script>
+		<!-- Perso Js Files -->
+	<script src="public/js/custom_perso.js"></script>
+  		<!-- Core JavaScript Files -->
 	<script src="public/js/jquery.min.js"></script>
 	<script src="public/js/bootstrap.min.js"></script>
 	<script src="public/js/jquery.easing.min.js"></script>
 	<script src="public/js/jquery.scrollTo.js"></script>
 	<script src="public/js/wow.min.js"></script>
-	<!-- Custom Theme JavaScript -->
+		<!-- Custom Theme JavaScript -->
 	<script src="public/js/custom.js"></script>
     </body>
 </html>

@@ -1,9 +1,18 @@
 
 a,.tp-caption a.btn:hover {
-	color: #67b0d1;
+	color: #56789e;
 }
-.top-nav-collapse {
-	background: #67b0d1;
+button a:hover {
+	color: #122337;
+}
+.btn_modify_post a, .btn_show_comments a
+{
+	color: white;
+}
+
+.top-nav-collapse
+{
+	background-color: #67b0d1;
 }
 
 @media (max-width: 768px) {

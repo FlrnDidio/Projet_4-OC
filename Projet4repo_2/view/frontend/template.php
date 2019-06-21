@@ -29,7 +29,7 @@
 	                    <i class="fa fa-bars"></i>
 	                </button>
 	        <a class="navbar-brand" href="index.php">
-	          <h1>Le blog de Jean Forteroche</h1>
+	          <h1 id="main_title">Jean Forteroche</h1>
 	        </a>
 	      </div>
 
@@ -45,6 +45,7 @@
 	              <li><a href="#">Example menu</a></li>
 	            </ul>
 	          </li>
+	          <li><a href="index.php?action=showSignIn">S'inscrire</a></li>
 	          <li><a href="index.php?action=showContact">Contact</a></li>
 	          <li><a href="index.php?action=showLog">Espace Admin</a></li>
 	          
@@ -60,7 +61,7 @@
 
 	    <div class="slogan">
 	      <h2>BILLET POUR<span class="text_color">L'ALASKA</span> </h2>
-	      <h4>Le dernier roman de Jean Forteroche</h4>
+	      <h4>Le dernier roman de Jean Forteroche</h4><br />
 	    </div>
 	  </section>
 	  <!-- /Section: intro -->
@@ -74,15 +75,15 @@
 	  </section>
 	  <!-- /Section Derniers billets -->
 
-	  <footer>
+	  <footer id="footercolor">
 	    <div class="container">
 	      <div class="row">
 	        <div class="col-md-12 col-lg-12">
 	          <div class="wow shake" data-wow-delay="0.4s">
 	            <div class="page-scroll marginbot-30">
 	              <a href="#intro" id="totop" class="btn btn-circle">
-								<i class="fa fa-angle-double-up animated"></i>
-							</a>
+					<i class="fa fa-angle-double-up animated"></i>
+				  </a>
 	            </div>
 	          </div>
 	          <p>&copy;SquadFREE. All rights reserved. <br /> Site réalisé dans le cadre d'une formation de développement web.
